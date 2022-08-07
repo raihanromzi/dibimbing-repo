@@ -1,0 +1,23 @@
+{
+  "name": "3.-code---project---posttest",
+  "version": "1.0.0",
+  "description": "Tugas-Tugas, Class Code, HandsOn selama Bootcamp diBimbing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raihanromzi/dibimbing-journey.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raihanromzi/dibimbing-journey/issues"
+  },
+  "homepage": "https://github.com/raihanromzi/dibimbing-journey#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {}
+}
