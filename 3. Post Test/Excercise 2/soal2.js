@@ -10,10 +10,14 @@ Expected Output:
 */
 
 // Jawaban:
-function removeDuplicates (str) {
-    //write your code here
-    
-};
+function removeDuplicates(str) {
+    let arrayResults = []
+    let arrayStrings = str.split('')
+    for (const string of arrayStrings) {
+        if (arrayResults.indexOf(string) === -1) arrayResults.push(string)
+    }
+    return arrayResults
+}
 
 console.log(removeDuplicates("AAAABBBCDFFFDAABBBCG"))
 console.log(removeDuplicates("RRRRROOOAAQPPP"))
