@@ -2,6 +2,7 @@
   "name": "3.-code---project---posttest",
   "version": "1.0.0",
   "description": "Tugas-Tugas, Class Code, HandsOn selama Bootcamp diBimbing",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
