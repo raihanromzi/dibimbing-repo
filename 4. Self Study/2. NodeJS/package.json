@@ -1,0 +1,17 @@
+{
+  "name": "2.-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "NODE_ENV=development node npm.js",
+    "start": "NODE_ENV=production node npm.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
+  },
+  "type": "module"
+}
