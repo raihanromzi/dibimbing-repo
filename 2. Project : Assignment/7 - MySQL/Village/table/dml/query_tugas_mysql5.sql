@@ -15,7 +15,8 @@ FROM Vaccination
                    ON Person.ID = Vaccination.PersonID;
 
 # Create A query to show the total of side effects of vaccination by brand
-SELECT Vaccination.Brand, COUNT(Vaccination.Brand) as "Total Side Effect"
+SELECT Vaccination.Brand,
+       SUM(Vaccination.SideEffect = 1) AS "Total Side Effect"
 FROM Vaccination
 GROUP BY Vaccination.Brand;
 

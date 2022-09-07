@@ -49,3 +49,7 @@ VALUES (1, 'Asep Septian', 27, 'M', STR_TO_DATE('10 - 12 - 1994 10:11', '%m-%d-%
 INSERT INTO Vaccination(PersonID, Brand, VaccinationDate, SideEffect)
 VALUES (1, 'Pijar', STR_TO_DATE('10-12-2021 10:11', '%m-%d-%Y %H:%i'), 0),
        (2, 'Pijar', STR_TO_DATE('10-12-2021 10:11', '%m-%d-%Y %H:%i'), 1);
+
+INSERT INTO Vaccination(PersonID, Brand, VaccinationDate, SideEffect)
+VALUES (3, 'Sinovac', STR_TO_DATE('10-12-2021 10:11', '%m-%d-%Y %H:%i'), 1),
+       (4, 'Sinovac', STR_TO_DATE('10-12-2021 10:11', '%m-%d-%Y %H:%i'), 0);
