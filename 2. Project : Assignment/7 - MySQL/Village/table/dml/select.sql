@@ -8,3 +8,7 @@ WHERE Gender = "F";
 SELECT ID, Address
 FROM Registry
 WHERE District IN (1, 4, 5);
+
+SELECT *
+FROM Person
+WHERE Name LIKE '*ta'
