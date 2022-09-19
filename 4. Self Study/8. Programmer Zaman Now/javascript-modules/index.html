@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Modules</title>
+</head>
+<body>
+<script type="module">
+  import defaultExp, { sayBye as bye } from './scripts/say.mjs'
+  import { Person } from './scripts/class.mjs'
+  import { sayBye as sudah } from './scripts/aggregatemodules.mjs'
+
+  defaultExp()
+  bye()
+  const person = new Person('Rick')
+  console.log(person.name)
+  sudah()
+</script>
+</body>
+</html>
