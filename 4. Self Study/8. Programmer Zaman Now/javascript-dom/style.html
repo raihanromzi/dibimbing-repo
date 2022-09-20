@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Style</title>
+</head>
+<body>
+<h4 id="text"></h4>
+<input id="blue" type="button" value="blue">
+<input id="red" type="button" value="red">
+<input id="yellow" type="button" value="yellow">
+<div id="canvas" style="height: 200px;width: 200px;background-color: black"></div>
+<script>
+  const canvas = document.getElementById('canvas')
+  const buttons = document.querySelectorAll('input')
+  const text = document.getElementById('text')
+  for (let button of buttons) {
+    button.onclick = () => {
+      text.textContent = `You change color to ${button.getAttribute('value')}`
+      canvas.style.backgroundColor = button.getAttribute('value')
+    }
+  }
+</script>
+</body>
+</html>

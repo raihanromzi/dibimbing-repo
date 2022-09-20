@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event</title>
+</head>
+<body>
+<h1 id="heading">Click Yellow Box</h1>
+<div id="box" style="height: 200px;width: 200px;background-color: yellow"></div>
+<script>
+  const heading = document.getElementById('heading')
+  const box = document.getElementById('box')
+  box.onclick = (ev) => {
+    heading.textContent = `Coordinate at X:${ev.x} Y:${ev.y}`
+  }
+</script>
+</body>
+</html>

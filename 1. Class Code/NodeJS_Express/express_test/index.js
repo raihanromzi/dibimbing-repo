@@ -1,7 +1,7 @@
 const express = require('express')
 
 const app = express()
-app.use(express.json())
+app.use(express.json)
 const todos = {
   1: {
     text: 'workout',
@@ -20,7 +20,7 @@ app.get('/api/todos', (req, res) => {
 app.post('/api/todos', (req, res) => {
   let newTodo = req.body
   let id = Math.floor(Math.random() * 100)
-  console.log(newTodo);
+  console.log(newTodo)
   todos[id] = newTodo
   res.json(todos)
 })

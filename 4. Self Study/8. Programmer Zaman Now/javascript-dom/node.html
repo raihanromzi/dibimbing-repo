@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Node</title>
+</head>
+<body>
+<ul id="menu">
+  <li id="satu">1</li>
+  <li id="dua">2</li>
+  <li id="tiga">3</li>
+</ul>
+<script>
+  const menu = document.getElementById('menu')
+  console.log(menu)
+
+  const second = document.getElementById('dua').textContent
+  console.log(second)
+
+  menu.removeChild(document.getElementById('satu'))
+
+</script>
+</body>
+</html>

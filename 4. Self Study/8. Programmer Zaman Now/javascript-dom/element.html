@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Element</title>
+</head>
+<body>
+<div class="content" id="content">
+  <h1>Belajar Javascript DOM</h1>
+  <p>Selamat Belajar JS DOM</p>
+</div>
+<div class="newContent" id="newContent"></div>
+<script>
+  const content = document.getElementById('content')
+  console.log(content.id)
+  console.log(content.className)
+  console.log(content.tagName)
+
+  //  Create Element
+  const newContent = document.getElementById('newContent')
+  const element = document.createElement('h1')
+  element.textContent = 'ELEMENT BARU h1'
+  newContent.appendChild(element)
+  
+</script>
+</body>
+</html>

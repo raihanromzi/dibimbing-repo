@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attribute</title>
+</head>
+<body>
+<a href="www.google.com" id="link">G</a>
+<img id="gambar">
+<script>
+  const link = document.getElementById('link')
+
+  // Mendapatkan Object attribute href
+  const href = link.getAttributeNode('href')
+  console.log(href.name)
+  console.log(href.value)
+
+  // Mendapatkan Attribute
+  const href2 = link.getAttribute('href')
+  console.log(href2)
+
+  // Membuat Attribute
+  const gambar = document.getElementById('gambar')
+  gambar.setAttribute('src', 'www.googleuhuk.com')
+  console.log(gambar.getAttribute('src'))
+
+
+</script>
+</body>
+</html>
