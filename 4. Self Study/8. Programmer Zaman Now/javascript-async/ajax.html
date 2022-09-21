@@ -5,12 +5,21 @@
   <title>Ajax</title>
 </head>
 <body>
+<h1 id="header"></h1>
 <script>
   const ajax = new XMLHttpRequest()
   // Ketika ajax dibuka akan melakukan request ke api/hello.json
   // Menggunakan HTTP Method
   ajax.open('GET', 'api/hello.json')
-  ajax.send() //
+
+  // Menerima data di AJAX
+  ajax.addEventListener('load', () => {
+    const header = document.getElementById('header')
+    header.textContent = JSON.parse(ajax.responseText).response
+  })
+
+  // Mengirim Data ke Server
+  ajax.send()
 </script>
 </body>
 </html>

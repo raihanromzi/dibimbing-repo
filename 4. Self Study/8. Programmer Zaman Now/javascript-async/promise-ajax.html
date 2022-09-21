@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise - Ajax</title>
+</head>
+<body>
+<script>
+  // Mengembalikan janji mendapatkan product
+  const getProductPromise = new Promise((resolve, reject) => {
+    const ajax = new XMLHttpRequest()
+    ajax.open('GET', 'api/product.json')
+    ajax.addEventListener('load', () => {
+      if (ajax.status === 200) {
+        resolve(ajax.responseText)
+      } else {
+        reject(`Error ${ajax.statusText}`)
+      }
+    })
+    ajax.send()
+  })
+
+  getProductPromise
+    .then((response) => console.log(response))
+    .catch((error) => console.log(error))
+    .finally(() => console.log('Finally'))
+</script>
+</body>
+</html>

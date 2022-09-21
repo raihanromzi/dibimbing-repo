@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax Response Status</title>
+</head>
+<body>
+<h1 id="header"></h1>
+<script>
+  const ajax = new XMLHttpRequest()
+  const displayResponse = (json) => {
+    const header = document.getElementById('header')
+    header.textContent = json.response
+
+  }
+  ajax.onreadystatechange = () => {
+    console.log(`Ready State Change ${ajax.readyState}`)
+  }
+  ajax.open('GET', 'api/hello.json')
+  ajax.addEventListener('load', () => {
+    if (ajax.status === 200) {
+      const json = JSON.parse(ajax.responseText)
+      displayResponse(json)
+    } else {
+      displayResponse({
+        response: `Response Status ${ajax.status}`
+      })
+    }
+  })
+  ajax.send()
+</script>
+</body>
+</html>

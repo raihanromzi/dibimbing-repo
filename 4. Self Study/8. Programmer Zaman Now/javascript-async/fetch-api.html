@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch API</title>
+</head>
+<body>
+<form>
+  <label for="username">Username:
+    <input id="username" type="text">
+  </label>
+  <br>
+  <br>
+  <input id="login" type="button" value="login">
+  <h1 id="response"></h1>
+</form>
+<script>
+  const doLogin = () => {
+    const request = new Request('https://hookb.in/8PqReGKmegipVYopjBZe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        username: document.getElementById('username').value
+      })
+    })
+
+    // Mengirim data -> Return berupa Promise -> Berisi object Response
+    const response = fetch(request)
+
+    response
+      .then((response) => response.json())
+      .then((json) => {
+        document.getElementById('response').textContent = json.success
+      })
+
+  }
+
+  document.getElementById('login').onclick = doLogin
+</script>
+</body>
+</html>
