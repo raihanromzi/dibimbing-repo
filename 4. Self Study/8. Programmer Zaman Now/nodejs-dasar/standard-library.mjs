@@ -1,4 +1,4 @@
 import os from 'os'
 
-console.log(os.platform())
-console.log(os.cpus())
+console.info(os.platform())
+console.table(os.cpus())

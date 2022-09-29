@@ -6,5 +6,7 @@
     <mapping directory="$PROJECT_DIR$/2. Assignment/7 - MySQL" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/2. Assignment/8 - NodeJS Express/day23" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/2. Project : Assignment/7 - MySQL" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/4. Self Study/8. Programmer Zaman Now/todolist-restfulapi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/5. Project/1. Miniproject/merchant-services" vcs="Git" />
   </component>
 </project>

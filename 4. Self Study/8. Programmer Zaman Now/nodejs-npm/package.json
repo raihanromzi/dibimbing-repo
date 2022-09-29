@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-npm",
+  "version": "1.0.0",
+  "description": "NPM Basic",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "prestart": "echo 'Pre Start'",
+    "poststart": "echo 'Post Start'"
+  },
+  "keywords": [
+    "nodejs",
+    "npm"
+  ],
+  "homepage": "",
+  "author": "Raihan Romzi R",
+  "contributors": [],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "exports": {
+    ".": "./index.js",
+    "./write": "./write.js"
+  },
+  "devDependencies": {
+    "moment": "^2.29.4"
+  }
+}

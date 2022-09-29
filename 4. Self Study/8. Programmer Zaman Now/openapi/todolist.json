@@ -1,16 +1,75 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "$Title$",
-    "description": "$Title$",
-    "version": "1.0.0"
+    "title": "TodoList RESTFUL API",
+    "description": "OpenAPI for Todolist RESTFUL API",
+    "version": "1",
+    "contact": {
+      "name": "Raihan Romzi",
+      "email": "raihanromzi.dev@gmail.com",
+      "url": "https://www.google.com"
+    },
+    "license": {
+      "name": "APACHE 2.0",
+      "url": "https://www.apache.org/license/LICENSE-2.0"
+    }
   },
   "servers": [
     {
-      "url": "$https$"
+      "url": "https://{envi}.raihanromzi.com/api/v1",
+      "description": "TodoList RESTFUL API Server",
+      "variables": {
+        "envi": {
+          "default": "dev",
+          "description": "Server Environment",
+          "enum": [
+            "dev",
+            "qa",
+            "prod"
+          ]
+        }
+      }
     }
   ],
   "paths": {
-    $END$
+    "/todolist": {
+      "post": {
+        "summary": "Create new Todolist",
+        "description": "Create new active todolist",
+        "responses": {
+        }
+      },
+      "get": {
+        "summary": "Get All Todolist",
+        "description": "Only will return active todolist, complete todolist or deleted todolist will be removed",
+        "responses": {
+        },
+        "parameters": [
+          {
+            "name": "Include done",
+            "required": false,
+            "in": "query"
+          }
+        ]
+      }
+    },
+    "/todolist/{todoliistId}": {
+      "delete": {
+        "summary": "Get All Todolist",
+        "description": "Only will return active todolist, complete todolist or deleted todolist will be removed",
+        "responses": {
+        }
+      },
+      "put": {
+        "summary": "Get All Todolist",
+        "description": "Only will return active todolist, complete todolist or deleted todolist will be removed",
+        "responses": {
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Youtube",
+    "url": "https://www.youtube.com"
   }
 }
