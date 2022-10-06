@@ -1,3 +1,4 @@
+// Babel
 import { sum } from '../src/sum.js'
 
 test('test sum function', () => {
