@@ -1,11 +1,13 @@
-test('test toBe', () => {
-  const name = 'Raihan'
-  const hello = `Hello ${name}`
+test("test toBe", () => {
+    const name = "Eko";
+    const hello = `Hello ${name}`;
 
-  expect(hello).toBe('Hello Raihan')
-})
+    expect(hello).toBe('Hello Eko');
+});
 
-test('test toEqual', () => {
-  const person = Object.assign({ name: 'Raihan' })
-  expect(person).toEqual({ name: 'Raihan' })
+test("test toEqual", () => {
+    let person = {id: "eko"};
+    Object.assign(person, {name: "Eko"});
+
+    expect(person).toEqual({id: "eko", name: "Eko"});
 })

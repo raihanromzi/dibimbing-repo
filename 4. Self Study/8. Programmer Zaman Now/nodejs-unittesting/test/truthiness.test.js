@@ -1,6 +1,16 @@
-test('truthiness', () => {
+test("truthiness", () => {
 
-  const value = null
-  expect(value).toBeNull()
+    let value = null;
+    expect(value).toBeNull();
+    expect(value).toBeDefined();
+    expect(value).toBeFalsy();
 
-}, 1000)
+    value = undefined;
+    expect(value).toBeUndefined();
+    expect(value).toBeFalsy();
+
+    value = "Eko";
+    expect(value).toBeTruthy();
+    expect(value).toBe("Eko");
+
+});
