@@ -1,0 +1,6 @@
+{"level":"error","message":"Hello Error","ms":"+0ms","timestamp":"2022-10-07T10:34:15.035Z"}
+{"level":"warn","message":"Hello Warn","ms":"+1ms","timestamp":"2022-10-07T10:34:15.036Z"}
+{"level":"info","message":"Hello Info","ms":"+0ms","timestamp":"2022-10-07T10:34:15.036Z"}
+{"level":"error","message":"Hello Error","ms":"+0ms","timestamp":"2022-10-07T10:37:47.601Z"}
+{"level":"warn","message":"Hello Warn","ms":"+1ms","timestamp":"2022-10-07T10:37:47.602Z"}
+{"level":"info","message":"Hello Info","ms":"+0ms","timestamp":"2022-10-07T10:37:47.602Z"}
