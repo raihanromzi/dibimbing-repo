@@ -15,6 +15,39 @@ app.get('/api/products', (req, res) => {
   res.json({ newProduct })
 })
 
+app.get('/api/products/:productID', (req, res) => {
+  const { productID } = req.params
+  const singleProduct = products.find((product) =>
+    product.id === Number(productID)
+  )
+
+  if (!singleProduct) {
+    res
+      .status(400)
+      .send('Not Found')
+    return
+  }
+  res.json(singleProduct)
+})
+
+app.get('/api/v1/search', (req, res) => {
+  const { name, limit } = req.query
+  let sortedProducts = [...products]
+
+  if (name) {
+    sortedProducts = sortedProducts.filter((product) => {
+      return product.name.startsWith(name)
+    })
+  }
+
+  if (limit) {
+    sortedProducts = sortedProducts.slice(0, Number(limit))
+  }
+  
+  res.status(200).json(sortedProducts)
+
+})
+
 app.listen(8080, () => {
   console.log('http://localhost:8080')
 })
